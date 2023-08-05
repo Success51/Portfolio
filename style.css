@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color: rgb(151, 145, 145);
+    background-color: rgb(221, 205, 205);
     overflow-x: hidden;
 }
 
@@ -15,7 +15,7 @@ body{
 }
 
 nav{
-    background-color: #450808;
+    background-color: #270505ef;
     opacity: 0.9;
     font-size: 2vw;
     height: 15vh;
