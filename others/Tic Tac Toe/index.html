@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+       <u> <h1>Tic Tac Toe</h1></u>
+          <p>Turn :<span id="turn"></span></p> 
+        <div id="game" class="section">
+            <div class="board" id="board"></div>
+        </div>
+    </div>
+
+    <div class="popup" id="popup">
+      <span class="wins" id="wins">Tic</span>
+      <span class="wins win" id="win">Tac Toe</span>
+      <button id="btn" onclick="resetGame()">Play</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

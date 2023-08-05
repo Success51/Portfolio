@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Tick</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(114, 187, 187);
+      }
+      .title {
+        position: absolute;
+        top: -15%;
+        background-color: gray;
+        color: white;
+        font-family: Tahoma;
+        font-size: 300%;
+        width: 100%;
+        text-align: center;
+        border: 1px solid black;
+        text-align: left;
+        padding-left: 50px;
+      }
+      .container {
+        position: relative;
+        width: 600px;
+        height: 300px;
+        margin-top: 25vh;
+        background-color: rgb(78, 78, 128);
+        display: flex;
+      }
+      .main {
+        width: 25%;
+        height: 200px;
+        margin: 5% 5% 1% 5%;
+        transition: all 1s linear;
+        overflow: visible;
+        transform-style: preserve-3d;
+      }
+      #m1 {
+        animation-name: m1;
+        animation-play-state: paused;
+        animation-iteration-count: infinite;
+        animation-duration: 4s;
+        z-index: 1;
+      }
+      #m3 {
+        animation-name: m3;
+        animation-play-state: paused;
+        animation-iteration-count: infinite;
+        animation-duration: 4s;
+        z-index: 1;
+      }
+      .card {
+        cursor: pointer;
+        background-color: green;
+        border: 3px solid black;
+        transition: all 1s linear;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+      .main img {
+        width: 100%;
+        height: 100%;
+        margin-top: -210px;
+        display: block;
+        backface-visibility: hidden;
+        border: 3px solid black;
+        transform: rotateY(180deg);
+        transition: all 1s linear;
+        cursor: pointer;
+      }
+      .main p {
+        font-size: 200%;
+        text-align: center;
+        margin-top: 50%;
+        color: rgb(209, 183, 183);
+        font-family: Roboto;
+      }
+      .shuffel {
+        width: 100px;
+        height: 40px;
+        background-color: orange;
+        border: 3px solid black;
+        position: absolute;
+        left: 37%;
+        font-size: 30px;
+        bottom: 10px;
+        cursor: pointer;
+      }
+      @keyframes m1 {
+        0% {
+          margin-left: 20px;
+        }
+        50% {
+          margin-left: 40%;
+          margin-right: -25%;
+        }
+        100% {
+          margin-left: 20px;
+        }
+      }
+      @keyframes m3 {
+        0% {
+          margin-right: 20px;
+        }
+        50% {
+          margin-right: 40%;
+          margin-left: -25%;
+        }
+        100% {
+          margin-right: 0;
+        }
+      }
+      .score {
+        background-color: gray;
+        border: 3px solid black;
+        font-size: 25px;
+        padding: 1%;
+        text-align: center;
+        color: white;
+        position: absolute;
+        right: 1%;
+        top: -35px;
+      }
+      .over {
+        width: 500px;
+        height: 200px;
+        background-color: blue;
+        z-index: 1;
+        margin-top: 123px;
+        border: 10px solid black;
+        margin-left: -550px;
+        text-align: center;
+        font-size: 100px;
+        color: rgb(86, 207, 30);
+        position: relative;
+        display: none;
+        transition: all 1s linear;
+      }
+      .over button {
+        font-size: 30px;
+        background-color: yellow;
+        border: none;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+      .hint {
+        font-size: 30px;
+        background-color: yellow;
+        border: none;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .container {
+          width: 400px;
+          height: 300px;
+        }
+        .main p {
+          font-size: 30px;
+          padding-top: 30%;
+        }
+        .title {
+          font-size: 200%;
+          margin-top: 0px;
+          text-align: left;
+          padding-left: 20px;
+          height: 15%;
+        }
+        .score {
+          border: 2px solid black;
+          margin-top: -8px;
+        }
+        .main {
+          margin: 5% 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title"><p>Choose any Card</p></div>
+      <div class="main" id="m1">
+        <div class="card one" id="one" onclick="run('m1','card1')">
+          <p>Reveal</p>
+        </div>
+        <img src="images/cross.jpeg" id="card1" />
+      </div>
+      <div class="main" id="m2">
+        <div class="card two" id="two" onclick="run('m2','card2')">
+          <p>Reveal</p>
+        </div>
+        <img src="images/cross.jpeg" id="card2" />
+      </div>
+      <div class="main" id="m3">
+        <div class="card three" id="three" onclick="run('m3','card3')">
+          <p>Reveal</p>
+        </div>
+        <img src="images/cross.jpeg" id="card3" />
+      </div>
+      <button class="shuffel" id="shuffel" onclick="shuffel()">Shuffel</button>
+      <div class="score" id="score">Score:0</div>
+      <div class="over" id="over">
+        Game Over
+        <button class="retry" id="retry">Retry</button>
+      </div>
+      <button class="hint" id="hint">Hint</button>
+    </div>
+  </body>
+  <script>
+    function pause() {
+      document.getElementById("m1").style.animationPlayState = "paused";
+      document.getElementById("m3").style.animationPlayState = "paused";
+    }
+    shuffel();
+    let cards = document.querySelectorAll("card");
+    function shuffel() {
+      setTimeout(pause, 4000);
+
+      document.getElementById("card1").src = "images/cross.jpeg";
+      document.getElementById("card2").src = "images/cross.jpeg";
+      document.getElementById("card3").src = "images/cross.jpeg";
+      document.getElementById("m1").style.animationPlayState = "running";
+      document.getElementById("m3").style.animationPlayState = "running";
+      function pause() {
+        document.getElementById("m1").style.animationPlayState = "paused";
+        document.getElementById("m3").style.animationPlayState = "paused";
+      }
+      if (
+        document.getElementById("m1").style.transform ||
+        document.getElementById("m2").style.transform ||
+        document.getElementById("m3").style.transform == "rotateY(180deg)"
+      ) {
+        document.getElementById("m1").style.transform = "rotateY(0deg)";
+        document.getElementById("m2").style.transform = "rotateY(0deg)";
+        document.getElementById("m3").style.transform = "rotateY(0deg)";
+      }
+      setTimeout(form, 2000);
+      function form() {
+        var random = Math.floor(Math.random() * 3 + 1);
+        var tick = "card" + random;
+        console.log(tick);
+        var img = document.getElementById(tick);
+        img.src = "images/tick.png";
+        document.getElementById("hint").addEventListener("click", function () {
+          document.getElementById("hint").innerText = tick;
+        });
+      }
+    }
+    function run(val, next) {
+      let img_display = document.getElementById(val);
+      var chance = 1;
+      var score = document.getElementById("score");
+      img_display.style.transform = "rotateY(180deg)";
+      document.getElementById("hint").innerText = "Hint";
+      if (
+        document.getElementById(next).getAttribute("src") == "images/tick.png"
+      ) {
+        scoreval++;
+        score.innerText = "score:" + scoreval;
+        console.log(score);
+        setTimeout(shuffel, 1000);
+      } else {
+        chance--;
+      }
+      if (chance == 0) {
+        document.getElementById("over").style.display = "block";
+      }
+      document.getElementById("retry").addEventListener("click", function () {
+        scoreval = 0;
+        score.innerHTML = "Score:0";
+        document.getElementById("over").style.display = "none";
+        shuffel();
+      });
+    }
+    let scoreval = 0;
+  </script>
+</html>

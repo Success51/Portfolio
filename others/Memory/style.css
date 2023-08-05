@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(86, 134, 224);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.frame {
+    display: flex;
+    height: 100px;
+    column-gap: 20px;
+  }
+  
+  .frame > div {
+    border: 1px solid green;
+    background-color: lime;
+    flex: auto;
+  }
