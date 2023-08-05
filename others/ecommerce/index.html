@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopMe.com</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/logo.png">
+</head>
+<body oncontextmenu="return false;">
+  <div class="container" id="container">
+  <!--------------------Navbar------------------>
+  <header id="header">
+        <div class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
+        <nav>
+        <ul id="ul">
+          <li class="btns"><a href="#home">Home</a></li>
+          <li class="btns"><a href="#products">Products</a></li>
+          <li class="btns"><a href="#checkout">Checkout</a></li>
+          <li><button id="sout" class="sout" onclick="sout()">Sign Out</button></li>
+          <li class="bars" id="bars">
+            <i class="fa fa-bars bar"></i>
+          </li>
+        </ul>
+    </nav>
+  </header>
+  <!--------------------------------------------------Home--------------------------------------->
+  <section id="home">
+  <img src="images/cart.png" id="cart" >
+    <p class="txt">Hey <span id="name">User!</span> Welcome to ShopMe.com <br> Our Website leads you to enjoyment and Happiness.
+    <br>
+  <button id="sign">Sign up as Guest &#8594;</button>
+  <button id="get"><a href="#products" style="text-decoration: none; color: rgb(34, 21, 21);">Get Started &#8594; </a></button>
+</p>
+  </section>
+    
+  <!--------------------------------------------------Products--------------------------------------->
+  <section id="products">
+    <br> <br><br><br>
+    <h1 style="font-size:40px; text-align: center;">Products</h1>
+    <div class="items" id="items">
+      <!--------------------------Example-Item----------------------->
+      <div class="item" id="item">
+        <button id="add" onclick="add(id)"><img src="images/cart_only.png"  id="addd" class="add"></button>
+        <img src="images/Pen.jpg" class="image">
+        <span class="desc">
+          Hauser Gell Pen [Sonic] 
+        </span>
+        <span class="P_Price">
+          Price: Rs.<span>400</span>
+        </span>
+      </div>
+    </div>
+  </section>
+  <!--------------------------------------------------Checkout--------------------------------------->
+  <section id="checkout">
+    <br><br><br><br><br>
+    <div class="CO_container">
+      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b><span id="NOI"></span></b></span></h4>
+      <hr>
+      <!--------------------------Example-Item----------------------->
+      <div id="itms">
+      <p id="itm"> <span id="p_Name"></span><span class="price" id="price"></span></p>
+    </div>
+      <hr>
+      <p class="ttl">Total <span class="price" style="color:black"><b><span id="total">0</span></b></span></p>
+      <button class="purchase" onclick="purchase()">Purchase</button>
+    </div>
+    <!-------------------------------About-US-->
+    <br><br><br><br><u><center><b>About Our Website</b></center></u>
+    <p class="about">
+      E-commerce has evolved over the past few years and since it’s easier and more convenient, it is evident that customers 
+      are actually switching to the trend of online shopping. <span style="color:rgb(160, 36, 36);font-weight: bolder;">ShopMe.com</span>, the Nepali shopping store, brings a whole new concept 
+      by showcasing a number of famous brands under one roof. Not only does it fulfill clothing necessities of both men and women but 
+      you can also shop for all kinds of appliances like air conditioners, heaters, refrigerators, LED TVs and a lot more. Simply 
+      select your favorite brand like 
+      Samsung, Apple, HP, Huawei, Dell, Canon, Nikon, etc and get yourself the best electronic items
+    </p>
+    <u> <center><b> Convenient Online Shopping in Nepal </b></center></u> 
+    <p class="about">
+      <span style="color:rgb(160, 36, 36);font-weight: bolder;">ShopMe.com</span> is the ultimate Nepali eCommerce website that offers a solution for all needs of the customers. 
+It has a wide and assorted range of products including clothing, electronics, mobile phones, home and living, 
+health and beauty and much more.
+
+<span style="color:rgb(160, 36, 36);font-weight: bolder;">ShopMe.com</span> strives to provide customers the best shopping experience in Nepal. The online store is updated 
+daily and new products are added every day to cater to all your needs. Visit <span style="color:rgb(160, 36, 36);font-weight: bolder;">ShopMe.com</span> to experience 
+shopping in Nepal as never before.
+    </p>
+  </section>
+  <!---------------------------------------------------Footer---------------------------------------->
+  <footer id="footer">
+    <p>  &copy; ShopeMe.com </p>
+    <div class="icons">
+      <i class="fa-brands fa-discord"></i>
+      <i class="fa-brands fa-youtube"></i>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-twitter"></i>
+  </div>
+  </footer>
+</div>
+<!---------------------------------SignUp-Form----------------------->
+<form class="signup" id="SignUp">
+  <h1>Sign In as Guest</h1>
+  <input type="text" id="nameInput" class="field" placeholder="First Name" required>
+<input type="text"  class="field" placeholder="Second Name" required>
+<input type="email" class="field" id="email" placeholder="Email" required>
+<input type="submit" value="Sign In" id="signed">
+</form>
+  </body>
+
+<!---------------------------------------Purchase----------------------------->
+<div class="Esewa" id="pur">
+  <button id="cross" onclick="close()">X</button>
+  <p  style="background-color: white;font-family: 'Courier New', Courier, monospace;font-weight: bold;
+    text-align: center;text-decoration: underline;">Press Escape Key to Close</p>
+  <img src="images/qr.png"  alt="Esewa Id = 9845179917">
+</div>
+<script src="script.js"></script>
+<script src="https://kit.fontawesome.com/a7b109dd6d.js" crossorigin="anonymous"></script>
+</html>

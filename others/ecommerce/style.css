@@ -1,0 +1,415 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+body{
+  min-height: 100vh;
+  background: #6cc8d6;
+  position: relative;
+}
+::selection{
+  color: #000;
+  background: #fff;
+}
+header{
+  background-color: rgba(44, 13, 13, 0.904);
+  position: fixed;
+  min-width: 100vw;
+  z-index: 100;
+}
+
+.logo{
+  padding: 0px 20px;
+}
+
+ul{
+  display: flex;
+  list-style: none;
+  word-spacing: 24px;
+  float: right;
+  margin-top: -50px ;
+}
+ul li {
+  transition: all 0.2s;
+}
+ul li a{
+  padding: 0px 40px;
+  font-size: 24px;
+  color:#6cc8d6;
+  text-decoration: none;
+}
+ul li:hover{
+  margin-top: -5px;
+  color: rgb(139, 77, 77);
+  text-decoration: underline;
+}
+.bars{
+  position: absolute;
+  display: none;
+  right: 30px;
+  top: 40%;
+  cursor: pointer;
+  color: white;
+}
+.bars:hover{
+  color: rgb(85, 158, 223);
+}
+.res{
+  position: absolute;
+  right: 0;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 70px;
+  top: 50px;
+}
+.res .bars{
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.res li a{
+  font-size: 30px;
+  color: rgb(54, 20, 20);
+}
+.res li{
+  padding: 20px 10px;
+}
+.sout{
+  border: none;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 20px;
+  margin-right: 80px;
+  background: none;
+  color: wheat;
+  text-decoration: underline;
+  cursor: pointer;
+}
+ .about{
+    padding: 20px 40px; 
+    color: rgb(85, 45, 45);
+  }
+section{
+  min-height: 90vh;
+}
+#cart{
+  float: right;
+  margin-right: 190px;
+  margin-top: 100px;
+  overflow: hidden;
+}
+.add{
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 30px;
+  border: 3px solid black;
+  right: 0;
+  border-top: none;
+  border-right: none;
+  cursor: pointer;
+}
+
+.txt{
+  padding: 45vh 0px 0px 60px;
+  font-size: 28px;
+  position: relative;
+  left: 0;
+}
+.txt #name{
+  color: rgb(221, 24, 24);
+  font-size: 30px;
+}
+#sign, #get{
+  margin-top: 30px;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  font-size: 30px;
+  background: rgb(219, 100, 100);
+  position: relative;
+  border-radius: 30px;  
+}
+  #get{
+    display: none;
+  }
+
+  #sign:hover, #get:hover{
+    background-color: rgb(174, 58, 228);
+  }
+.signup{
+  background-color: rgb(228, 217, 217);
+  border: none;
+  border-radius: 20px;
+  min-width: 50vw;
+  min-height: 400px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 25vw;
+  top: 25vh;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.Esewa{
+  z-index: 999999;
+  position: fixed;
+  top: 20vh;
+  left: 30vw;
+  display: none;
+}
+.Esewa img{
+  width: 70vh;
+  aspect-ratio: 1;
+}
+.signup .field{
+  margin: 10px;
+  min-width: 100%;
+  font-size: 20px;
+  height: 50px;
+}
+.signup h1{
+  position: absolute;
+  top: 40px;
+  font-size: 200%;
+}
+ #signed{
+  cursor: pointer;
+  max-width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+  font-size: 20px;
+  position: absolute;
+  bottom: 20px;
+  border-radius: 10px;
+  background-color :rgb(193, 160, 224);
+}
+.items{
+  display: grid;
+  grid-row: 4;
+  grid-column: 4;
+  grid-template-columns: auto auto auto auto;
+}
+
+.item{
+  width: 250px;
+  height: 350px;
+  border: 1px solid rgb(145, 111, 111);
+  margin: 10px 30px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: margin 0.2s ease-in;
+}
+.item:hover{
+  margin-top: -2px;
+}
+
+.items .item .image{
+  width: 100%;
+  height: 70%;
+  position: absolute;
+  top: 0;
+}
+
+.items .item .desc{
+  font-size: large;
+  position: absolute;
+  bottom: 60px;
+  margin-left: 10px;
+}
+.items .item .P_Price{
+  position: absolute;
+  bottom: 10px;
+  float: left;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.CO_container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  max-width: 95vw;
+  border-radius: 3px;
+  margin-left: 1vw;
+  margin-bottom: 10px;
+  position: relative;
+
+}
+.line{
+  width: 97%;
+  height: 1px;
+  background-color: #000;
+  bottom: 30px;
+}
+.remove{
+  border: none;
+  border-radius: 50%;
+  padding: 4px;
+  font-size: 18px;
+  font-family:cursive;
+  cursor: pointer;
+  float: left;
+}
+span.price {
+  float: right;
+  color: grey;
+}
+#cross{
+  border: none;
+  background: none;
+  position: absolute;
+  font-family: cursive;
+  top: 0px;
+  cursor: pointer;
+  right: 10px;
+  color: red;
+  font-size: 20px;
+}
+.purchase{
+  width: 100%;
+  background-color: #4285F4;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;  
+}
+.purchase:hover{
+  background-color: #3077f1;
+}
+
+footer{
+  color: white;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+  position: relative;
+  min-height: 70px;
+}
+footer p{
+  position: absolute;
+  top: 10px;
+}
+footer .icons{
+  position: absolute;
+  bottom: 10px;
+}
+footer .icons i{
+  padding: 0px 3px;
+  cursor: pointer;
+}
+
+@media  only screen and (max-width:1225px){
+  .items{
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media only screen and (max-width:1100px){
+  #sign{
+    margin-top: 20px;
+    margin-left: -50px;
+    position: absolute;
+  }
+ }
+
+ @media only screen and (max-width:1000px){
+  ul .btns{
+    display: none;
+  }
+  
+  .bars{
+   display: block;
+  }
+}
+
+@media only screen and (max-width:960px){
+  #cart{
+   margin-left: 40px;
+ }
+   #sign{
+     left: 25%;
+     float: right;
+   }
+  
+ }
+ 
+ @media only screen and  (max-width:1225px) and (min-width:930px){
+  .items{
+    grid-template-columns: auto  auto auto;
+  }
+}
+@media only screen and (max-width:930px){
+  .items{
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: 750px){
+  #cart{
+    display: none;
+  }
+  .Esewa{
+    left: 20vw;
+  }
+}
+
+@media only screen and (max-width:610px){
+  .items{
+    grid-template-columns: auto ;
+    padding: 0px 10vw;
+  }
+  
+  .Esewa{
+    left: 10vw;
+  }
+}
+
+@media only screen and (max-width:500px){
+  .Esewa{
+    left: 10vw;
+  }
+  .Esewa img{
+    width: 90%;
+  }
+  .Esewa p{
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width:450px){
+  .signup{
+    left:10vw
+  }
+  #cart{
+    width: 120vw;
+  }
+  
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+

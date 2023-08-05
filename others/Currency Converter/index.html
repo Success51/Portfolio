@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <u><h1>Convert Currency</h1></u>
+        <div class="currencies">
+            <div class="first currency">
+                <select class="select" id="from">
+                    <option value="127.21">USD</option>
+                    <option value="1">NRP</option>
+                    <option value="88.16">AUD</option>
+                    <option value="1.59">INR</option>
+                    <option value="2.19">RUB</option>
+                </select>
+                <input type="number" id="fromNum" value="1" min="1">
+            </div>
+            <div class="second currency">
+                <select class="select" id="to">
+                    <option value="1">NRP</option>
+                    <option value="127.21">USD</option>
+                    <option value="88.16">AUD</option>
+                    <option value="1.59">INR</option>
+                    <option value="2.19">RUB</option>
+                </select>
+                <input type="number" id="toNum" readonly>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

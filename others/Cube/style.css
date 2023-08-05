@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(228, 228, 153);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#display{
+    width: 100%;
+    font-size: 200px;
+    text-align: center;
+    margin: 0px 0px 0px 20px;
+}
+
+button{
+    text-align: center;
+    border: none;
+    font-size: 50px;
+    position: absolute;
+    bottom: 140px;
+    right: 50vw;
+    background-color: rgb(195, 169, 221);
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+}

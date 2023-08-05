@@ -1,0 +1,55 @@
+<html lang="en" >
+<head >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch the Pokemon Ball</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="user-select: none;">
+<!--------Heading--------->
+<h1 class="head"> Catch The Pokemon Ball</h1>
+
+<!---------Images to Show------->
+<img src="images/q.jpg"  class="ball" id="ball">
+<img src="images/shop.png" id="shop" class="shop" >
+<Span class="money">🪙<span id="money">4000</span></Span>
+
+
+<!--------Center Objects------->
+    <div class="centers">
+
+<button id="start" class="start">Start</button>
+<!-------Game-Over-Display-->
+<div id="gameOver" class="gameOver">
+<u><h1> GAME OVER </h1></u>
+<br>
+<h2> Total Clicks : <span id = "fClick"></span></h2>
+<h2> Coins: <span id = "coins"></span></h2>
+<button id="playAgain" class="playAgain">Play Again</button>
+</div>  
+
+<!------------Shop-Display--------->
+<div class="shopwin" id="shopwin">
+    <h1>Shop</h1>
+    <br><br>
+</div>
+<!-------------------SPEC---Window--------->
+<div class="spec" id="spec">
+    <img src="images/close.png" id="close" >
+    <img src="images/x2.png">
+   <span id="price">200🪙</span>
+   <button class="get">Get</button>
+</div>
+
+    </div>
+
+    <!------Some-Labels------->
+<p class= "clicks" >Clicks: <span id="clicks">0</span> </p>
+<p class= "clicks time" >Time : <span id="time">60s</span> </p>
+<p class= "clicks highest"> Highest : <span id="highest"></span> </p>
+
+
+</body>
+<script src= "script.js" ></script>
+</html>
