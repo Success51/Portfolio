@@ -1,6 +1,6 @@
 let items = document.getElementById('hero');
 let elem = document.getElementById('elem');
-let span = ['Click Simulator 1','Clicker Simulator 2','Cube','Currency Converter','ecommerce','Entrance Quiz','extension','Jhandi burja','Memory','Peace Zone english School','Tic Tac Toe','Tick'];
+let span = ['Click Simulator 1','Clicker Simulator 2','Cube','Currency Converter','ecommerce','Entrance Quiz','extension','Jhandi burja','Memory','Peace Zone english school','Tic Tac Toe','Tick'];
 
 
 for(var i= 0;i<span.length;i++){
