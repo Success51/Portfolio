@@ -99,3 +99,23 @@ p {
     background-color: rgb(131, 131, 10);
 }
 
+.cell{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    font-size: 80px;
+    text-shadow:
+      0 0 7px #18a2d0,
+      0 0 10px #a31b1b,
+      0 0 21px #431717,
+      0 0 42px rgb(31, 78, 62),
+      0 0 82px rgb(14, 116, 82),
+      0 0 92px rgb(255, 255, 255),
+      0 0 102px rgb(164, 210, 36),
+      0 0 151px rgb(211, 35, 35);
+}
+.X{
+    color: #00BFFF;
+}
+.O{
+    color: #ff0055;
+}
