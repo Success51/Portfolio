@@ -1,4 +1,5 @@
-let currentPlayer = "X";
+let players = ["X","O"];
+let currentPlayer = players[Math.flooar(Math.random()*1+1)];
 let gameBoard = ["", "", "", "", "", "", "", "", ""];
 let wins = document.getElementById('wins');
 let btn = document.getElementById('btn');
