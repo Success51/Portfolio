@@ -1,5 +1,5 @@
-let players = ["X","O"];
-let currentPlayer = players[Math.flooar(Math.random()*1+1)];
+let players = ['X','O'];
+let currentPlayer = players[Math.floor(Math.random() * 2)];
 let gameBoard = ["", "", "", "", "", "", "", "", ""];
 let wins = document.getElementById('wins');
 let btn = document.getElementById('btn');
@@ -72,7 +72,6 @@ function resetGame() {
         popup.style.display = 'none';
         bgMusic.play(); 
     }
-    currentPlayer = "X";
 document.getElementById('turn').textContent = currentPlayer;
 }
 initializeGame();
